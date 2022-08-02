@@ -14,11 +14,11 @@ function SubChild({ theme, switchTheme }) {
             : "bg-slate-900 text-gray-300"
         }`}
       >
-        Welcome to TailwindCss
+        Welcome to TailwindCss <span className="capitalize">{theme}</span> Mode
       </h1>
       <button
         type="button"
-        className={`w-fll py-1 px-3 text-white font-bold text-xl block mx-auto rounded-xl mt-6 ${
+        className={`py-1 px-3 text-white font-bold text-xl block mx-auto rounded-xl mt-6 ${
           theme === "light" ? "bg-sky-400 " : "bg-blue-500"
         }`}
         onClick={switchTheme}
