@@ -1,7 +1,6 @@
-import React, { createContext, useState } from "react";
+import React, { useState } from "react";
 import Home from "./compnent/Home";
-
-const Name = createContext();
+import ThemeContext from "./contexts/ThemeContext";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -14,12 +13,11 @@ function App() {
   };
   return (
     <div>
-      <Name.Provider value={{ theme: theme, switchTheme: switchTheme }}>
+      <ThemeContext.Provider value={{ theme: theme, switchTheme: switchTheme }}>
         <Home />
-      </Name.Provider>
+      </ThemeContext.Provider>
     </div>
   );
 }
 
 export default App;
-export { Name };
